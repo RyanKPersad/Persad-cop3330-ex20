@@ -16,7 +16,7 @@ public class App {
         final double county_tax2 = .004;
         final double wisconsin_tax = .05;
         final double illinois_tax = .08;
-        double subtotal = 0;
+        double subtotal;
         double state_tax = 0;
         double total;
         double total2 = 0;
@@ -28,6 +28,7 @@ public class App {
         System.out.println("What state do you live in?");
         state = myObj.nextLine();
 
+        //Nest if-else
         if (state.equalsIgnoreCase("Wisconsin")) {
             state_tax = order1 * wisconsin_tax;
             total = order1 + state_tax;
@@ -52,6 +53,7 @@ public class App {
             }
 
 
+
         } else if (state.equalsIgnoreCase("Illinois")) {
             total = order1;
             state_tax = total * illinois_tax;
@@ -60,9 +62,9 @@ public class App {
         }else{
             subtotal = order1;
 
-
-
         }
+
+
 
         String print = String.format("%.2f",state_tax);
         String print1 = String.format("%.2f",total2);
